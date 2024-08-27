@@ -12,8 +12,14 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
+
   const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    RobotoThin: require('../assets/fonts/Roboto-Thin.ttf'),
+    RobotoLight: require('../assets/fonts/Roboto-Light.ttf'),
+    RobotoRegular: require('../assets/fonts/Roboto-Regular.ttf'),
+    RobotoMedium: require('../assets/fonts/Roboto-Medium.ttf'),
+    RobotoBold: require('../assets/fonts/Roboto-Bold.ttf'),
+    RobotoBlack: require('../assets/fonts/Roboto-Black.ttf'),
   });
 
   useEffect(() => {
