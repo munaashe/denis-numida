@@ -72,7 +72,7 @@ const LoanCard: React.FC<LoanCardProps> = ({
       <CardText>Maximum Amount</CardText>
       <CardAmount style={amountStyle}>{amount}</CardAmount>
       <ButtonContainer>
-        <InterestText>{interest}</InterestText>
+        <InterestText>{`Interest: ${interest}%`}</InterestText>
         <Button
           title="Learn More   →"
           onPress={onClick}

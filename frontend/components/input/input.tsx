@@ -7,7 +7,7 @@ interface InputProps {
     title: string;
     placeholder?: string;
     value: string | number;
-    onChange: () => void;
+    onChange: (text: string) => void; // Updated type
     style?: ViewStyle;
     inputStyle?: TextStyle;
 }
@@ -26,7 +26,7 @@ const StyledTitle = styled(Text)`
   line-height: 19.36px;
   font-weight: 500;
   padding-bottom: 8px;
-`
+`;
 
 const Input: React.FC<InputProps> = ({
     placeholder,
@@ -41,7 +41,7 @@ const Input: React.FC<InputProps> = ({
             <StyledTitle>{title}</StyledTitle>
             <StyledInput
                 placeholder={placeholder}
-                value={value}
+                value={String(value)}
                 onChangeText={onChange}
                 style={[style, inputStyle]}
             />
@@ -54,5 +54,5 @@ export default Input;
 const styles = StyleSheet.create({
     container: {
         marginTop: 24,
-    }
-})
+    },
+});
