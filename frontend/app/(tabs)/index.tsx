@@ -77,5 +77,6 @@ const styles = StyleSheet.create({
   blueCardStyle: {
     backgroundColor: '#D4FAF5',
     marginBottom: 20,
+    marginTop: 40,
   },
 });
